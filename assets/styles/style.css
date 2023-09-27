@@ -1,0 +1,368 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAF2D3;
+    display: flex;
+    flex-direction: column;
+}
+
+/* navbar */
+header {
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+}
+
+header .navbar {
+    position: fixed;
+    width: 100%;
+    max-height: 66px;
+    background-color: #5CD2E6;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar .logo {
+    color: #3085C3;
+    font-size: 1.75rem;
+    font-weight: 800;
+    line-height: 10px;
+    text-decoration: none;
+    display: inline-flex;
+}
+
+header .navbar .logo img {
+    width: 55px;
+    height: 60px;
+
+}
+
+header .navbar ul {
+    position: relative;
+}
+
+header .navbar ul li {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+
+header .navbar ul li a {
+    color: #ffff;
+    font-size: 1.1rem;
+    padding: 20px 25px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .navbar ul li a:hover {
+    background: #FAF2D3;
+    
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 150px;
+    background: #92e2f0;
+    display: none;
+}
+
+header .navbar ul li:hover ul {
+    display: block;
+}
+
+header .navbar ul li ul li{
+    position: relative;
+    width: 100%;
+}
+
+
+
+/* jumbotron */
+header .jumbotron {
+    background: url(../images/jumbotron.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 250px 0;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+main {
+    display: flex;
+    padding: 1.3rem;
+    gap: 1.2rem;
+}
+
+/* konten utama */
+main .konten {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-grow: 2;
+}
+
+main .konten h2 {
+    color: #3085C3;
+}
+
+main .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .card:hover {
+    box-shadow: 1px 1px 10px 1px #5CD2E6;
+}
+
+main .card .gambar {
+    width: 100%;
+    max-width: 350px;
+    object-fit: cover;
+    display: flex;
+    align-self: flex-start;
+}
+
+main #komplikasi li {
+    font-weight: bold;
+}
+
+/* sumber */
+main .konten #sumber {
+    border: 7px double #5CD2E6;
+    padding: 2rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* konten samping*/
+main aside article{
+    display: flex;
+    gap: 1.2rem;
+}
+
+main aside article #profile {
+    text-align: center;
+}
+
+main aside article h2 {
+    color: #3085C3;
+}
+
+main aside article img {
+    width: 100%;
+    max-width: 200px;
+    border: solid;
+}
+
+main aside article .tabel{
+    width: 270px;
+    display: flex;
+    justify-content: space-around;
+}
+
+main aside article .tabel th {
+    text-align: end;
+}
+
+main aside article .tabel td {
+    text-align: start;
+    padding-left: 10px;
+}
+
+
+/* footer */
+footer {
+    background-color: #5CD2E6;
+    background-size: cover;
+    background-position: center;
+}
+
+footer .box-container{
+    background-color: #3085C3;
+    background-size: cover;
+    background-position: center;
+    gap: 1rem;
+    padding: 20px 100px 20px 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+
+}
+
+footer .box-container .box {
+    text-align: center;
+    padding: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+footer .box-container .box ul {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    align-self: flex-start;
+    width: 250px;
+}
+
+footer .box-container .box li {
+    list-style-type: none;
+    display: flex;
+    flex-basis: 1rem;
+    align-self: flex-start;
+}
+
+footer .box-container .box h3 {
+    color: white;
+    text-align: end;
+    font-weight: 800;
+}
+
+footer .box-container .box a {
+    font-size: 15px;
+    color: #FAF2D3;
+    display: block;
+    text-decoration: none;
+    text-align: start;
+}  
+
+footer .box-container .box a:hover{
+    color: white;
+    font-weight: bold;
+}
+
+footer .box-container .box a i {
+    color: #5CD2E6;
+    transition: .2s linear;
+}
+
+footer .box-container .box a:hover i{
+    padding-right: .7rem;
+}
+
+footer p {
+    background-color: #5CD2E6;
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+/* media queries */
+@media (max-width: 1040px) {
+    header .navbar nav {
+        position: absolute;
+        width: 100%;
+        top: 66px;
+        left: 0;
+        background: #92e2f0;
+        display: none;
+    }
+
+    header .navbar.active nav {
+        display: initial;
+    }
+    
+    header .navbar nav ul li {
+        width: 100%;
+    }
+
+    header .navbar nav ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuToggle::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: white;
+        transform: translateY(-12px);
+        box-shadow: 0 12px white;
+    }
+
+    .menuToggle::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        background: white;
+        transform: translateY(12px);
+    }
+
+    .navbar.active .menuToggle::before{
+        transform: rotate(45deg);
+        box-shadow: 0 0 white;
+    }
+
+    .navbar.active .menuToggle::after {
+        transform: rotate(315deg);
+    }
+
+    header .jumbotron {
+        width: 100%
+    }
+
+    body {
+        width: 100%;
+        align-items: center;
+    }
+
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main aside article{
+        align-self: center;
+    }
+
+    main aside article .tabel {
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    footer .box-container {
+        flex-direction: column;
+    }
+
+    footer .box-container .box {
+        justify-content: center;
+    }
+}
